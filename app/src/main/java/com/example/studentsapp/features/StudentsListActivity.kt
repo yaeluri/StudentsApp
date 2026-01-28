@@ -20,7 +20,6 @@ class StudentsListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_students_list)
 
-        StudentsRepository.seedIfEmpty()
 
         adapter = StudentsAdapter(
             onRowClick = { student ->
