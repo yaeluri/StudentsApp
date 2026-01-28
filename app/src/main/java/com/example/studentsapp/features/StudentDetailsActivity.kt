@@ -32,10 +32,11 @@ class StudentDetailsActivity : AppCompatActivity() {
 
         val btnEdit = findViewById<Button>(R.id.btnEdit)
         btnEdit.setOnClickListener {
-
-            Toast.makeText(this, "Edit screen in next commit", Toast.LENGTH_SHORT).show()
-
+            val intent = Intent(this, EditStudentActivity::class.java)
+            intent.putExtra(Nav.EXTRA_ORIGINAL_ID, studentId)
+            startActivity(intent)
         }
+
     }
 
     override fun onResume() {
