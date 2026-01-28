@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.studentsapp.Nav
 import com.example.studentsapp.R
 import com.example.studentsapp.model.StudentsRepository
+import com.google.android.material.appbar.MaterialToolbar
 
 class StudentDetailsActivity : AppCompatActivity() {
 
@@ -19,6 +20,11 @@ class StudentDetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_student_details)
+
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
+        toolbar.setNavigationOnClickListener {
+            finish()
+        }
 
         studentId = intent.getStringExtra(Nav.EXTRA_STUDENT_ID)
         if (studentId == null) {

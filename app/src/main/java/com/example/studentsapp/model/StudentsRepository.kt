@@ -29,9 +29,4 @@ object StudentsRepository {
         s.isChecked = !s.isChecked
     }
 
-    fun seedIfEmpty() {
-        if (students.isNotEmpty()) return
-        add(Student("Student One", "1001", "050-1111111", "Raanana", false))
-        add(Student("Student Two", "1002", "050-2222222", "Tel Aviv", true))
-    }
 }

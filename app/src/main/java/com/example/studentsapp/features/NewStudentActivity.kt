@@ -9,12 +9,18 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.studentsapp.R
 import com.example.studentsapp.model.Student
 import com.example.studentsapp.model.StudentsRepository
+import com.google.android.material.appbar.MaterialToolbar
 
 class NewStudentActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_student)
+
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
+        toolbar.setNavigationOnClickListener {
+            finish()
+        }
 
         val edtName = findViewById<EditText>(R.id.edtName)
         val edtId = findViewById<EditText>(R.id.edtId)

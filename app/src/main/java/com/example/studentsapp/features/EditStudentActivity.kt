@@ -7,6 +7,7 @@ import com.example.studentsapp.Nav
 import com.example.studentsapp.R
 import com.example.studentsapp.model.Student
 import com.example.studentsapp.model.StudentsRepository
+import com.google.android.material.appbar.MaterialToolbar
 
 class EditStudentActivity : AppCompatActivity() {
 
@@ -15,6 +16,11 @@ class EditStudentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_student)
+
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
+        toolbar.setNavigationOnClickListener {
+            finish()
+        }
 
         originalId = intent.getStringExtra(Nav.EXTRA_ORIGINAL_ID)
         if (originalId == null) {
