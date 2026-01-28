@@ -37,6 +37,8 @@ class StudentsListActivity : AppCompatActivity() {
 
         val fabAdd = findViewById<com.google.android.material.floatingactionbutton.FloatingActionButton>(R.id.fabAdd)
         fabAdd.setOnClickListener {
+            val intent = Intent(this, NewStudentActivity::class.java)
+            startActivity(intent)
         }
     }
 

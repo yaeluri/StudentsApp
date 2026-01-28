@@ -13,7 +13,6 @@
         android:theme="@style/Theme.StudentsApp">
         <activity
             android:name=".ui.StudentsListActivity"
-
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,8 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.StudentDetailsActivity" />
-
+        <activity android:name=".ui.NewStudentActivity" />
     </application>
 
 </manifest>
