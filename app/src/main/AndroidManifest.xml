@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentsApp">
         <activity
-            android:name=".ui.StudentsListActivity"
+            android:name=".features.StudentsListActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +20,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.NewStudentActivity" />
+        <activity android:name=".features.NewStudentActivity" />
+        <activity android:name=".ui.EditStudentActivity" />
+        <activity android:name=".ui.StudentDetailsActivity" />
+
+
     </application>
 
 </manifest>

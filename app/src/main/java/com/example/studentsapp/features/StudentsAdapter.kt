@@ -42,7 +42,6 @@ class StudentsAdapter(
         holder.txtName.text = student.name
         holder.txtId.text = student.id
 
-        // חשוב: למנוע "קפיצות" בגלל recycle
         holder.chkChecked.setOnCheckedChangeListener(null)
         holder.chkChecked.isChecked = student.isChecked
 
