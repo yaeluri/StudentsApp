@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.studentsapp.R
 import com.example.studentsapp.model.StudentsRepository
+import com.example.studentsapp.Nav
 
 class StudentsListActivity : AppCompatActivity() {
 
@@ -19,7 +20,11 @@ class StudentsListActivity : AppCompatActivity() {
 
         adapter = StudentsAdapter(
             onRowClick = { student ->
-            },
+                val intent = Intent(this, StudentDetailsActivity::class.java)
+                intent.putExtra(Nav.EXTRA_STUDENT_ID, student.id)
+                startActivity(intent)
+            }
+            ,
             onCheckedToggle = { student ->
                 StudentsRepository.toggleChecked(student.id)
                 adapter.submitList(StudentsRepository.getAll().toList())
