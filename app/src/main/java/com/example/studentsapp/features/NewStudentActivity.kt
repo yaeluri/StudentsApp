@@ -1,4 +1,4 @@
-package com.example.studentsapp.ui
+package com.example.studentsapp.features
 
 import android.os.Bundle
 import android.widget.Button
